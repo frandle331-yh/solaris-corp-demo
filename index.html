@@ -7,38 +7,49 @@
 <meta name="description" content="WordPress実績用デモ。架空企業SOLARISのコーポレートサイトです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="hdr">
+<header class="hdr" id="hdr">
   <div class="hdr__in">
     <a class="logo" href="index.html">SOLA<b>RIS</b><small>ソラリス株式会社</small></a>
     <nav class="nav">
-      <a href="#service">事業内容<span class="en">SERVICE</span></a>
-      <a href="#about">会社について<span class="en">ABOUT</span></a>
-      <a href="news.html">お知らせ<span class="en">NEWS</span></a>
-      <a class="nav__cta" href="#contact">お問い合わせ</a>
+      <a href="#service">事業内容<span class="en">Service</span></a>
+      <a href="#works">導入事例<span class="en">Works</span></a>
+      <a href="#about">会社について<span class="en">About</span></a>
+      <a href="news.html">お知らせ<span class="en">News</span></a>
+      <a class="nav__cta" href="#contact">無料相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </nav>
-    <div class="hdr__menu">≡</div>
+    <button class="hdr__menu" id="menuBtn" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="drawer" id="drawer">
+    <a href="#service">事業内容</a>
+    <a href="#works">導入事例</a>
+    <a href="#about">会社について</a>
+    <a href="news.html">お知らせ</a>
+    <a class="drawer__cta" href="#contact">無料相談する →</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero__bg"><img src="assets/img/hero.jpg" alt=""></div>
   <div class="hero__in">
-    <p class="hero__eyebrow">MONOZUKURI × DX</p>
-    <h1>技術で、現場の<span>「できない」</span>を<br>「できる」に変える。</h1>
-    <p>製造・物流の現場に寄り添い、業務システムの開発から自動化・データ活用まで。SOLARISは、中小企業のDXを一気通貫で支える技術パートナーです。</p>
+    <p class="hero__eyebrow"><span>Monozukuri × DX</span></p>
+    <h1>技術で、現場の<br><span class="nw">「できない」を</span><span class="nw">「できる」に。</span></h1>
+    <p class="hero__lead">製造・物流の現場に寄り添い、業務システムの開発から自動化・データ活用まで。SOLARISは、中小企業のDXを一気通貫で支える技術パートナーです。</p>
     <div class="hero__btns">
-      <a class="btn" href="#contact">ご相談はこちら →</a>
+      <a class="btn" href="#contact">無料で相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn--ghost" href="#service">事業内容を見る</a>
     </div>
-    <div class="hero__stats">
-      <div class="hero__stat"><b>120<span style="font-size:.5em">社+</span></b><span>支援実績</span></div>
-      <div class="hero__stat"><b>15<span style="font-size:.5em">年</span></b><span>事業継続</span></div>
-      <div class="hero__stat"><b>98<span style="font-size:.5em">%</span></b><span>継続率</span></div>
+  </div>
+  <div class="hero__stats">
+    <div class="hero__stats-in">
+      <div class="hero__stat"><b>120<small>社+</small></b><span>支援実績</span></div>
+      <div class="hero__stat"><b>15<small>年</small></b><span>事業継続</span></div>
+      <div class="hero__stat"><b>98<small>%</small></b><span>契約継続率</span></div>
     </div>
   </div>
 </section>
@@ -46,58 +57,133 @@
 <!-- SERVICE -->
 <section class="sec" id="service">
   <div class="inner">
-    <div class="sec-head">
+    <div class="sec-head reveal">
       <span class="en">Service</span>
       <h2>事業内容</h2>
       <p>現場の課題起点で、必要な技術だけを過不足なく。</p>
     </div>
     <div class="svc">
-      <div class="svc__card">
-        <div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
-        <p class="svc__no">01</p>
-        <h3>業務システム開発</h3>
-        <p>受発注・在庫・勤怠など、現場の業務に合わせた使いやすいシステムを設計・開発します。</p>
-      </div>
-      <div class="svc__card">
-        <div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M5 12H3M21 12h-2M6 6l-1.5-1.5M18 18l1.5 1.5"/><circle cx="12" cy="12" r="4"/></svg></div>
-        <p class="svc__no">02</p>
-        <h3>業務自動化・RPA</h3>
-        <p>手作業のくり返しを自動化し、人はより価値の高い仕事へ。小さく始めて効果を確かめられます。</p>
-      </div>
-      <div class="svc__card">
-        <div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 4-6"/></svg></div>
-        <p class="svc__no">03</p>
-        <h3>データ活用支援</h3>
-        <p>散らばったデータを集約・可視化し、経営判断に使える形へ。ダッシュボード構築まで対応します。</p>
-      </div>
+      <a class="svc__card reveal" href="#contact">
+        <div class="svc__ph"><img src="assets/img/svc-system.jpg" alt="業務システム開発" loading="lazy"><span class="svc__no">01</span></div>
+        <div class="svc__body">
+          <h3>業務システム開発</h3>
+          <p>受発注・在庫・勤怠など、現場の業務に合わせた「使い続けられる」システムを設計・開発します。</p>
+          <span class="svc__more">詳しく相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="svc__card reveal" href="#contact" style="transition-delay:.08s">
+        <div class="svc__ph"><img src="assets/img/svc-rpa.jpg" alt="業務自動化・RPA" loading="lazy"><span class="svc__no">02</span></div>
+        <div class="svc__body">
+          <h3>業務自動化・RPA</h3>
+          <p>手作業のくり返しを自動化し、人はより価値の高い仕事へ。小さく始めて効果を確かめられます。</p>
+          <span class="svc__more">詳しく相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="svc__card reveal" href="#contact" style="transition-delay:.16s">
+        <div class="svc__ph"><img src="assets/img/svc-data.jpg" alt="データ活用支援" loading="lazy"><span class="svc__no">03</span></div>
+        <div class="svc__body">
+          <h3>データ活用支援</h3>
+          <p>散らばったデータを集約・可視化し、経営判断に使える形へ。ダッシュボード構築まで対応します。</p>
+          <span class="svc__more">詳しく相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
+<!-- WORKS -->
+<section class="sec sec--gray" id="works">
+  <div class="inner">
+    <div class="sec-head reveal">
+      <span class="en">Works</span>
+      <h2>導入事例</h2>
+      <p>成果は、現場の数字で語ります。</p>
+    </div>
+    <div class="works">
+      <article class="work reveal">
+        <div class="work__ph"><img src="assets/img/case-warehouse.jpg" alt="物流業の導入事例" loading="lazy"><span class="work__tag">物流業／従業員80名</span></div>
+        <div class="work__body">
+          <h3>在庫管理システムの刷新で、棚卸時間を大幅削減</h3>
+          <p>紙とExcelで管理していた在庫情報をクラウド化。ハンディ端末との連携で入出庫をリアルタイムに把握できる体制へ。</p>
+          <div class="work__nums">
+            <div><b>75<small>%</small></b><span>棚卸時間 削減</span></div>
+            <div><b>0<small>件</small></b><span>出荷ミス（導入後6ヶ月）</span></div>
+          </div>
+        </div>
+      </article>
+      <article class="work reveal" style="transition-delay:.08s">
+        <div class="work__ph"><img src="assets/img/case-factory.jpg" alt="製造業の導入事例" loading="lazy"><span class="work__tag">金属加工業／従業員45名</span></div>
+        <div class="work__body">
+          <h3>検品記録の自動化で、残業時間を月40時間削減</h3>
+          <p>検品結果の転記・集計作業をRPAで自動化。ベテラン担当者の負担を減らし、品質記録の精度も向上しました。</p>
+          <div class="work__nums">
+            <div><b>40<small>h/月</small></b><span>残業時間 削減</span></div>
+            <div><b>2<small>週間</small></b><span>で初期導入完了</span></div>
+          </div>
+        </div>
+      </article>
+      <article class="work reveal" style="transition-delay:.16s">
+        <div class="work__ph"><img src="assets/img/case-meeting.jpg" alt="卸売業の導入事例" loading="lazy"><span class="work__tag">食品卸売業／従業員120名</span></div>
+        <div class="work__body">
+          <h3>売上データの見える化で、会議時間が半分に</h3>
+          <p>拠点ごとにバラバラだった売上データを自動集約し、経営ダッシュボードを構築。資料づくりのための残業がなくなりました。</p>
+          <div class="work__nums">
+            <div><b>1/2</b><span>経営会議の時間</span></div>
+            <div><b>5<small>拠点</small></b><span>のデータを自動集約</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="works__note">※ 事例は架空のものです（ポートフォリオ用デモ）</p>
+  </div>
+</section>
+
 <!-- ABOUT -->
-<section class="sec sec--gray" id="about">
+<section class="sec" id="about">
   <div class="inner">
     <div class="about">
-      <div class="about__txt">
+      <div class="about__txt reveal">
         <span class="en">About us</span>
         <h2>「現場が続けられる」<br>仕組みだけを、届ける。</h2>
         <p>どれだけ高機能でも、現場が使いこなせなければ意味がありません。SOLARISは導入して終わりではなく、運用が定着するところまで伴走します。</p>
         <p>専門用語を使わない対話と、必要最小限の構成。中小企業の「ちょうどいいDX」を大切にしています。</p>
-        <a class="link-btn" href="#" style="margin-top:8px">会社概要を見る →</a>
+        <dl class="about__tbl">
+          <div><dt>社名</dt><dd>ソラリス株式会社（架空）</dd></div>
+          <div><dt>設立</dt><dd>2011年4月</dd></div>
+          <div><dt>所在地</dt><dd>東京都大田区南蒲田1-2-3（架空）</dd></div>
+          <div><dt>事業内容</dt><dd>業務システム開発／業務自動化・RPA／データ活用支援</dd></div>
+        </dl>
       </div>
-      <div class="about__visual"><span class="en">SOLARIS<br>Inc.</span></div>
+      <div class="about__visual reveal"><img src="assets/img/about.jpg" alt="現場に寄り添う支援" loading="lazy"></div>
     </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="sec sec--gray" id="flow">
+  <div class="inner">
+    <div class="sec-head reveal">
+      <span class="en">Flow</span>
+      <h2>ご相談の流れ</h2>
+      <p>最初の1ヶ月で「効果が出るか」を見極めてから、本格導入へ。</p>
+    </div>
+    <ol class="flow">
+      <li class="reveal"><span class="flow__no">01</span><h3>無料相談</h3><p>現場の困りごとを伺います。オンライン・訪問どちらでも。</p></li>
+      <li class="reveal" style="transition-delay:.06s"><span class="flow__no">02</span><h3>現場調査・ご提案</h3><p>実際の業務を拝見し、費用対効果まで含めてご提案します。</p></li>
+      <li class="reveal" style="transition-delay:.12s"><span class="flow__no">03</span><h3>小さく導入</h3><p>一部の業務から小さく始め、効果を数字で確認します。</p></li>
+      <li class="reveal" style="transition-delay:.18s"><span class="flow__no">04</span><h3>本格展開・伴走</h3><p>運用が現場に定着するまで、責任を持って伴走します。</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- NEWS preview -->
 <section class="sec" id="news">
   <div class="inner">
-    <div class="sec-head">
-      <span class="en">News</span>
-      <h2>お知らせ</h2>
+    <div class="sec-head sec-head--row reveal">
+      <div><span class="en">News</span><h2>お知らせ</h2></div>
+      <a class="link-btn pc" href="news.html">お知らせ一覧へ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="news-list">
+    <div class="news-list reveal">
       <a class="news-item" href="news-article.html">
         <span class="news-item__date">2026.07.14</span>
         <span class="news-item__cat press">プレスリリース</span>
@@ -123,16 +209,21 @@
         <span class="news-item__arrow">→</span>
       </a>
     </div>
-    <div class="news-more"><a class="link-btn" href="news.html">お知らせ一覧へ →</a></div>
+    <div class="news-more sp"><a class="link-btn" href="news.html">お知らせ一覧へ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta" id="contact">
-  <div class="inner">
+  <div class="cta__bg"><img src="assets/img/cta-bg.jpg" alt="" loading="lazy"></div>
+  <div class="inner cta__in reveal">
+    <span class="en">Contact</span>
     <h2>まずは、現場の困りごとから。</h2>
-    <p>ご相談・お見積もりは無料です。小さな課題でもお気軽にどうぞ。</p>
-    <a class="btn" href="#" onclick="return false">お問い合わせフォームへ →</a>
+    <p>ご相談・お見積もりは無料です。「何から手をつければいいか分からない」段階でも、お気軽にどうぞ。</p>
+    <div class="cta__btns">
+      <a class="btn btn--lg" href="#" onclick="return false">お問い合わせフォームへ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="cta__tel"><small>お電話でのご相談（平日 9:00-18:00）</small><b>03-1234-5678</b></p>
+    </div>
   </div>
 </section>
 
@@ -141,11 +232,11 @@
   <div class="inner">
     <div class="ft__grid">
       <div>
-        <p class="ft__logo">SOLARIS</p>
+        <p class="ft__logo">SOLA<b>RIS</b></p>
         <p class="ft__desc">ソラリス株式会社（架空）<br>中小製造・物流企業のDXを、現場目線で一気通貫に支援する技術パートナーです。</p>
       </div>
       <div>
-        <h4>SERVICE</h4>
+        <h4>Service</h4>
         <ul>
           <li><a href="#service">業務システム開発</a></li>
           <li><a href="#service">業務自動化・RPA</a></li>
@@ -153,12 +244,12 @@
         </ul>
       </div>
       <div>
-        <h4>COMPANY</h4>
+        <h4>Company</h4>
         <ul>
           <li><a href="#about">会社概要</a></li>
+          <li><a href="#works">導入事例</a></li>
           <li><a href="news.html">お知らせ</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
-          <li><a href="#">プライバシーポリシー</a></li>
         </ul>
       </div>
     </div>
@@ -167,5 +258,6 @@
 </footer>
 <div class="demo-note">このサイトはポートフォリオ用のデモです。掲載の社名・実績・製品名はすべて架空のものです。</div>
 
+<script src="assets/script.js"></script>
 </body>
 </html>

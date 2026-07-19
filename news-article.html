@@ -7,27 +7,38 @@
 <meta name="description" content="WordPress実績用デモ。記事詳細ページのサンプルです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="hdr">
+<header class="hdr" id="hdr">
   <div class="hdr__in">
     <a class="logo" href="index.html">SOLA<b>RIS</b><small>ソラリス株式会社</small></a>
     <nav class="nav">
-      <a href="index.html#service">事業内容<span class="en">SERVICE</span></a>
-      <a href="index.html#about">会社について<span class="en">ABOUT</span></a>
-      <a href="news.html">お知らせ<span class="en">NEWS</span></a>
-      <a class="nav__cta" href="index.html#contact">お問い合わせ</a>
+      <a href="index.html#service">事業内容<span class="en">Service</span></a>
+      <a href="index.html#works">導入事例<span class="en">Works</span></a>
+      <a href="index.html#about">会社について<span class="en">About</span></a>
+      <a href="news.html">お知らせ<span class="en">News</span></a>
+      <a class="nav__cta" href="index.html#contact">無料相談する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </nav>
-    <div class="hdr__menu">≡</div>
+    <button class="hdr__menu" id="menuBtn" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+  <div class="drawer" id="drawer">
+    <a href="index.html#service">事業内容</a>
+    <a href="index.html#works">導入事例</a>
+    <a href="index.html#about">会社について</a>
+    <a href="news.html">お知らせ</a>
+    <a class="drawer__cta" href="index.html#contact">無料相談する →</a>
   </div>
 </header>
 
 <div class="pagehead">
-  <span class="en">News</span>
-  <h1>お知らせ</h1>
+  <div class="pagehead__bg"><img src="assets/img/hero.jpg" alt=""></div>
+  <div class="inner">
+    <span class="en">News</span>
+    <h1>お知らせ</h1>
+  </div>
 </div>
 
 <div class="inner">
@@ -63,11 +74,11 @@
   <div class="inner">
     <div class="ft__grid">
       <div>
-        <p class="ft__logo">SOLARIS</p>
+        <p class="ft__logo">SOLA<b>RIS</b></p>
         <p class="ft__desc">ソラリス株式会社（架空）<br>中小製造・物流企業のDXを、現場目線で一気通貫に支援する技術パートナーです。</p>
       </div>
       <div>
-        <h4>SERVICE</h4>
+        <h4>Service</h4>
         <ul>
           <li><a href="index.html#service">業務システム開発</a></li>
           <li><a href="index.html#service">業務自動化・RPA</a></li>
@@ -75,9 +86,10 @@
         </ul>
       </div>
       <div>
-        <h4>COMPANY</h4>
+        <h4>Company</h4>
         <ul>
           <li><a href="index.html#about">会社概要</a></li>
+          <li><a href="index.html#works">導入事例</a></li>
           <li><a href="news.html">お知らせ</a></li>
           <li><a href="index.html#contact">お問い合わせ</a></li>
           <li><a href="#">プライバシーポリシー</a></li>
@@ -89,5 +101,6 @@
 </footer>
 <div class="demo-note">このサイトはポートフォリオ用のデモです。掲載の社名・実績・製品名はすべて架空のものです。</div>
 
+<script src="assets/script.js"></script>
 </body>
 </html>
