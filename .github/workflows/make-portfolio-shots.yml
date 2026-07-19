@@ -1,0 +1,26 @@
+name: make-portfolio-shots
+on: push
+permissions:
+  contents: write
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate portfolio screenshots and commit
+        run: |
+          npm init -y > /dev/null
+          npm i playwright > /dev/null
+          npx playwright install --with-deps chromium > /dev/null
+          node portfolio/shoot.js
+          rm -f package.json package-lock.json
+          rm -rf node_modules
+          rm .github/workflows/make-portfolio-shots.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "ポートフォリオ用スクリーンショットを追加（自動生成）"
+          git push

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1000px;height:782px;overflow:hidden;position:relative;font-family:'Noto Sans JP',sans-serif;background:#081326;color:#fff}
+.bg{position:absolute;inset:0}
+.bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,rgba(8,19,38,.96) 30%,rgba(8,19,38,.55) 100%)}
+.in{position:relative;z-index:1;padding:54px 60px 0}
+.eyebrow{font-family:'Montserrat';font-size:14px;font-weight:700;letter-spacing:.3em;color:#8fb4ff;display:flex;align-items:center;gap:16px;margin-bottom:22px;text-transform:uppercase}
+.eyebrow::before{content:"";width:44px;height:2px;background:#8fb4ff}
+h1{font-size:52px;font-weight:900;line-height:1.35;letter-spacing:.04em;margin-bottom:18px}
+h1 b{color:#7ea8ff}
+.sub{font-size:19px;font-weight:500;color:#c7d4ea;margin-bottom:22px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chips span{border:1.5px solid rgba(255,255,255,.45);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:700;background:rgba(8,19,38,.4)}
+.browser{position:absolute;left:60px;right:-40px;bottom:-40px;top:400px;z-index:1;border-radius:12px 0 0 0;overflow:hidden;box-shadow:0 -20px 60px rgba(0,0,0,.5);background:#fff}
+.bar{height:36px;background:#1c2430;display:flex;align-items:center;gap:7px;padding:0 16px}
+.bar i{width:11px;height:11px;border-radius:50%;background:#3d4a5f;display:block}
+.bar i:nth-child(1){background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
+.bar em{font-style:normal;font-family:'Montserrat';font-size:11px;color:#8595ad;background:#0d1f3c;border-radius:6px;padding:3px 14px;margin-left:12px}
+.vp{width:1280px;height:900px;transform:scale(0.6875);transform-origin:0 0;border:0}
+</style>
+</head>
+<body>
+<div class="bg"><img src="../assets/img/hero.jpg"></div>
+<div class="in">
+  <p class="eyebrow">Corporate Site — Design Renewal</p>
+  <h1>コーポレートサイト<br><b>デザインリニューアル</b></h1>
+  <p class="sub">写真主体のモダンデザイン × WordPressで自社更新できるNEWS</p>
+  <div class="chips"><span>レスポンシブ対応</span><span>成果が伝わる導入事例</span><span>WP子テーマ実装</span></div>
+</div>
+<div class="browser">
+  <div class="bar"><i></i><i></i><i></i><em>solaris-corp-demo</em></div>
+  <iframe class="vp" src="../index.html"></iframe>
+</div>
+</body>
+</html>
