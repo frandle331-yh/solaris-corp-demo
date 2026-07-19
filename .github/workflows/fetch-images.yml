@@ -1,0 +1,28 @@
+name: fetch-images
+on: push
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch photos from Unsplash and commit
+        run: |
+          mkdir -p assets/img
+          curl -fsSL --retry 3 -o assets/img/hero.jpg "https://images.unsplash.com/photo-1610891015188-5369212db097?w=1568&h=784&q=78&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/svc-system.jpg "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1000&h=666&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/svc-rpa.jpg "https://images.unsplash.com/photo-1716191300020-b52dec5b70a8?w=1000&h=666&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/svc-data.jpg "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&h=666&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/case-warehouse.jpg "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1000&h=666&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/case-factory.jpg "https://images.unsplash.com/photo-1613620855495-129bee8746b7?w=1000&h=666&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/case-meeting.jpg "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&h=666&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/about.jpg "https://images.unsplash.com/photo-1609153754837-b95fe3f8e787?w=1000&h=749&q=80&fm=jpg&fit=crop"
+          curl -fsSL --retry 3 -o assets/img/cta-bg.jpg "https://images.unsplash.com/photo-1717386255773-1e3037c81788?w=1600&h=800&q=76&fm=jpg&fit=crop"
+          ls -la assets/img
+          rm .github/workflows/fetch-images.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "デザインリニューアル：写真素材を追加（workflow自動実行・実行後に自己削除）"
+          git push
